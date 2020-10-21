@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {  Button, Table } from 'reactstrap';
+import {  Button, Card, CardBody, CardHeader, Table } from 'reactstrap';
 import {connect} from "react-redux"
 import { bindActionCreators } from 'redux';
 import *as cartActions from "../../redux/actions/cartActions"
@@ -11,9 +11,16 @@ class FoodsList extends Component {
     render() {
         return (
             <div>
-                <h3>Yemek Listesi</h3>
-                <Table>
-      <thead>
+                <Card>
+                    <CardHeader><h3>Yemek Listesi</h3></CardHeader>
+                    <CardBody>
+                    <div style={{
+                maxHeight: '350px',
+                overflowY: 'auto'
+              }}>
+                
+                <Table bordered height="200">
+      <thead >
         <tr>
           <th>#</th>
           <th>Menü</th>
@@ -21,7 +28,7 @@ class FoodsList extends Component {
           <th>Kalori</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody >
           {this.props.foods.map(food=>(
               <tr key={food.id}>
           <th scope="row"><Button color="success" onClick={()=>this.addToCart(food)}>+</Button></th>
@@ -36,6 +43,12 @@ class FoodsList extends Component {
     </Table>
 
             </div>
+                    </CardBody>
+                </Card>
+            </div>
+
+
+            
         )
     }
 }

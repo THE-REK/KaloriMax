@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {connect} from "react-redux"
-import {  Button, Table } from 'reactstrap';
+import {  Badge, Button, Card, CardBody, Col, Table, Row, CardHeader } from 'reactstrap';
 import { bindActionCreators } from 'redux';
 import *as cartActions from "../../redux/actions/cartActions"
 
@@ -9,9 +9,15 @@ import *as cartActions from "../../redux/actions/cartActions"
 class CartList extends Component {
     render() {
         return (
-            <div>
-                <h3>Yediklerim</h3>
-                <Table>
+            <Card>
+                <CardHeader><h3>Yediklerim</h3></CardHeader>
+                <CardBody>
+                <div style={{
+            maxHeight: '350px',
+            overflowY: 'auto'
+          }}>
+                
+                <Table responsive>
       <thead>
         <tr>
           <th>#</th>
@@ -27,13 +33,42 @@ class CartList extends Component {
           <td>{cartItem.food.foodName}</td>
           <td>{cartItem.quantity}</td>
           <td>{cartItem.food.calories}</td>
+          
         </tr>
+        
           ))}
+          
+          
         
         
       </tbody>
+      
     </Table>
+    {this.props.cart.length!==0 ? (
+              <div>
+            <h3><Badge>
+                 Toplam Kalori: {this.props.cart.reduce((a,c)=> a + c.food.calories*c.quantity, 0 )}
+                 </Badge> 
+                </h3> 
+          </div>
+          ):(<div>
+              <Row>
+                  <Col xs="12">
+                  <Card body outline color="danger" >
+                  <CardBody >
+                      <h3>Henüz Yemek Yemediniz</h3>
+                      <h5><Badge>Toplam Kalori: 0</Badge></h5>
+                  </CardBody>
+              </Card>
+                  </Col>
+              </Row>
+              
+          </div>)}
             </div>
+
+                </CardBody>
+            </Card>
+           
         )
     }
 }
