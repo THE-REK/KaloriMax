@@ -13,7 +13,7 @@ class CartList extends Component {
                 <CardHeader><h3>Yediklerim</h3></CardHeader>
                 <CardBody>
                 <div style={{
-            maxHeight: '350px',
+            maxHeight: '415px',
             overflowY: 'auto'
           }}>
                 
@@ -28,7 +28,7 @@ class CartList extends Component {
       </thead>
       <tbody>
           {this.props.cart.map(cartItem=>(
-              <tr key={cartItem.id}>
+              <tr key={cartItem.food.id}>
           <th scope="row"><Button color="danger" onClick={()=>this.props.actions.removeFromCart(cartItem.food)}>X</Button></th>
           <td>{cartItem.food.foodName}</td>
           <td>{cartItem.quantity}</td>
@@ -46,9 +46,11 @@ class CartList extends Component {
     </Table>
     {this.props.cart.length!==0 ? (
               <div>
-            <h3><Badge>
-                 Toplam Kalori: {this.props.cart.reduce((a,c)=> a + c.food.calories*c.quantity, 0 )}
-                 </Badge> 
+            <h3>{this.props.forms.gkm<this.props.cart.reduce((a,c)=> a + c.food.calories*c.quantity, 0 )?
+            (<div><Badge color="danger">Toplam Kalori:{this.props.cart.reduce((a,c)=> a + c.food.calories*c.quantity, 0 )}</Badge></div>):(
+                <div><Badge color="success">Toplam Kalori:{this.props.cart.reduce((a,c)=> a + c.food.calories*c.quantity, 0 )}</Badge></div>
+            )
+             }  
                 </h3> 
           </div>
           ):(<div>
@@ -84,7 +86,8 @@ function mapDispatchToProps(dispatch){
 function mapStateToProps(state){
     return {
         foods:state.changeFoodReducer,
-        cart: state.cartReducer
+        cart: state.cartReducer,
+        forms: state.calorieReducer
     }
 }
 

@@ -27,7 +27,7 @@ export default class Navi extends Component {
                 <NavLink href="/components/">Components</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/TE-REK/KaloriMax">
+                <NavLink href="https://github.com/THE-REK/KaloriMax">
                   GitHub
                 </NavLink>
               </NavItem>

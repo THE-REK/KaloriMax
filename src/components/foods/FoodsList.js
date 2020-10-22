@@ -15,7 +15,7 @@ class FoodsList extends Component {
                     <CardHeader><h3>Yemek Listesi</h3></CardHeader>
                     <CardBody>
                     <div style={{
-                maxHeight: '350px',
+                maxHeight: '415px',
                 overflowY: 'auto'
               }}>
                 

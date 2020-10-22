@@ -20,5 +20,6 @@ export default {
     {"id":17 ,"foodName":"Rodeo King", "calories":1250}
         
         ],
-        cart: []
+        cart: [],
+        forms:{boy:0 , kilo:0 , yas:0 , gender:"", gkm:0}
 }
