@@ -6,7 +6,7 @@ import FoodsList from "../foods/FoodsList";
 export default class FoodsCart extends Component {
   render() {
     return (
-      <div>
+      <div style={{marginTop:20}}>
         <Row>
           <Col xs="6">
             <FoodsList />

@@ -9,7 +9,7 @@ import *as cartActions from "../../redux/actions/cartActions"
 class CartList extends Component {
     render() {
         return (
-            <Card>
+            <Card style={{border:"2px solid"}}>
                 <CardHeader><h3>Yediklerim</h3></CardHeader>
                 <CardBody>
                 <div style={{

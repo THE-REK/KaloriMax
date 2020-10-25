@@ -7,11 +7,9 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
+  
+  DropdownToggle
+  
 } from "reactstrap";
 
 export default class Navi extends Component {
@@ -24,24 +22,17 @@ export default class Navi extends Component {
           <Collapse navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="/foods/">Yemek Kalori Listesi</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/THE-REK/KaloriMax">
                   GitHub
                 </NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Foods Cart
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Foods Cart Elemanlari</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              
             </Nav>
             <DropdownToggle>Profil</DropdownToggle>
-            <NavbarText>Simple Text</NavbarText>
+            
           </Collapse>
         </Navbar>
       </div>

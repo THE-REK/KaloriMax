@@ -27,7 +27,7 @@ class CaloryCalculate extends Component {
     render() {
         return (
             <div style={{
-                
+                marginTop:20,
                 overflowY: 'auto'
               }}>
                 <Card>
