@@ -29,6 +29,9 @@ export default class Navi extends Component {
                   GitHub
                 </NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink href="/water/">Günlük Su İhtiyacı</NavLink>
+              </NavItem>
               
             </Nav>
             <DropdownToggle>Profil</DropdownToggle>
