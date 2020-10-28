@@ -6,11 +6,9 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  
-  DropdownToggle
-  
+  NavLink,  
 } from "reactstrap";
+import { Link } from "react-router-dom"
 
 export default class Navi extends Component {
   render() {
@@ -34,7 +32,7 @@ export default class Navi extends Component {
               </NavItem>
               
             </Nav>
-            <DropdownToggle>Profil</DropdownToggle>
+            <Link to="/profile">Profile</Link>
             
           </Collapse>
         </Navbar>

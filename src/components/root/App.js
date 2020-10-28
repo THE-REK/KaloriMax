@@ -3,7 +3,8 @@ import Signup from "../../pages/auth/Signup"
 import { Container } from "react-bootstrap"
 import { AuthProvider } from "../../contexts/AuthContexts"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Dashboard from "./DashBoard"
+import Dashboard from './DashBoard'
+import Profile from "../../pages/auth/Profile"
 import Login from "../../pages/auth/Login"
 import PrivateRoute from "../../pages/auth/PrivateRoute"
 import ForgotPassword from "../../pages/auth/ForgotPassword"
@@ -23,6 +24,7 @@ function App() {
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
+              <Route path="/profile" component={Profile} />
               <Route path="/forgot-password" component={ForgotPassword} />
             </Switch>
           </AuthProvider>
