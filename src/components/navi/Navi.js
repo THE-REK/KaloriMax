@@ -7,14 +7,15 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Badge,  
+  
+  DropdownToggle,  
 } from "reactstrap";
-import { Link } from "react-router-dom"
+
 
 export default class Navi extends Component {
   render() {
     return (
-      <div style={{marginLeft:"250px"}}>
+      <div style={{ width:"1500px"}}>
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">KALORİMAX</NavbarBrand>
           <NavbarToggler />
@@ -33,7 +34,7 @@ export default class Navi extends Component {
               </NavItem>
               
             </Nav>
-            <Badge color="success"><Link to="/profile">Profile</Link>  </Badge>
+            <DropdownToggle ><NavLink color="black" href="/profile">Profile</NavLink>  </DropdownToggle>
             
           </Collapse>
         </Navbar>
