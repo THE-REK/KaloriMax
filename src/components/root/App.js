@@ -1,28 +1,35 @@
-import React from 'react';
-import { Container } from 'reactstrap';
-import Navi from '../navi/Navi';
-import DashBoard from './DashBoard';
-import FoodsList from "../foods/FoodsList"
-import {Route, Switch} from "react-router-dom"
-import Water from "../water/Water"
+import React from "react"
+import Signup from "../../pages/auth/Signup"
+import { Container } from "react-bootstrap"
+import { AuthProvider } from "../../contexts/AuthContexts"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Dashboard from "./DashBoard"
+import Login from "../../pages/auth/Login"
+import PrivateRoute from "../../pages/auth/PrivateRoute"
+import ForgotPassword from "../../pages/auth/ForgotPassword"
+import UpdateProfile from "../../pages/auth/UpdateProfile"
 
 function App() {
   return (
-    <div>
-      <Container>
-        <Navi/>
-        <Switch>
-          <Route path="/" exact component={DashBoard} />
-          <Route path="/foods" exact component={FoodsList} />
-          <Route path="/water" exact component={Water} />
-
-
-          
-        </Switch>
-        
-      </Container>
-    </div>
-  );
+    <Container
+      className="d-flex align-items-center justify-content-center"
+      style={{ minHeight: "100vh" }}
+    >
+      <div className="w-100" style={{ maxWidth: "400px" }}>
+        <Router>
+          <AuthProvider>
+            <Switch>
+              <Route exact path="/" component={Dashboard} />
+              <PrivateRoute path="/update-profile" component={UpdateProfile} />
+              <Route path="/signup" component={Signup} />
+              <Route path="/login" component={Login} />
+              <Route path="/forgot-password" component={ForgotPassword} />
+            </Switch>
+          </AuthProvider>
+        </Router>
+      </div>
+    </Container>
+  )
 }
 
 export default App;

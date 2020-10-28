@@ -2,25 +2,25 @@ import React, { Component } from 'react'
 import { FormGroup, Input, Label, Form, Card, CardHeader, CardBody, Badge} from 'reactstrap'
 import {connect} from "react-redux"
 import { bindActionCreators } from 'redux';
-import *as calorieActions from "../../redux/actions/calorieActions"
+import * as calorieActions from "../../redux/actions/calorieActions"
 
 
 class CaloryCalculate extends Component {
-    // handleSubmit=(event)=>{
-    //     event.preventDefault();
-    //     this.calculateCalorie();
-    // }
+     handleSubmit=(event)=>{
+         event.preventDefault();
+         this.calculateCalorie();
+     }
     
-    // calculateCalorie=()=>{
-    //     if(this.props.forms.gender==="Erkek"){
-    //         var top= 66+ 13.75*this.props.forms.kilo + 5*this.props.forms.boy - 6.8*this.props.forms.yas;
-    //         return top  ;
+     calculateCalorie=()=>{
+        if(this.props.forms.gender==="Erkek"){
+             var top= 66+ 13.75*this.props.forms.kilo + 5*this.props.forms.boy - 6.8*this.props.forms.yas;
+             return top  ;
             
-    //     }else if(this.props.forms.gender==="Kadın"){
-    //         var top2= 66.5+ 13.75*this.props.forms.kilo + 5*this.props.forms.boy - 6.8*this.props.forms.yas;
-    //         return top2;
-    //     }
-    // }
+         }else if(this.props.forms.gender==="Kadın"){
+            var top2= 66.5+ 13.75*this.props.forms.kilo + 5*this.props.forms.boy - 6.8*this.props.forms.yas;
+             return top2;
+         }
+     }
 
     
     
