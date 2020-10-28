@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Navi from '../../components/navi/Navi'
-import { Row } from 'reactstrap'
+import { CardHeader, Row } from 'reactstrap'
 import { Card, Button, Alert } from "react-bootstrap"
 import { useAuth } from "../../contexts/AuthContexts"
 import { Link, useHistory } from "react-router-dom"
@@ -22,14 +22,16 @@ export default function Profile() {
     }
         return (
                 <>
-                 <div>
+                 <div style={{marginBottom:"80px"}}>
                 <Row>
                     <Navi />
                 </Row>
             </div>
-                  <Card>
+            <div style={{width:"300px", marginLeft:"370px", height:"200px"}}>
+              <Card >
+                <CardHeader><h2 className="text-center mb-4">Profile</h2>  </CardHeader>
                     <Card.Body>
-                      <h2 className="text-center mb-4">Profile</h2>
+                      
                       {error && <Alert variant="danger">{error}</Alert>}
                       <strong>Email:</strong> {currentUser && currentUser.email}
                       <Link to="/update-profile" className="btn btn-primary w-100 mt-3">
@@ -42,6 +44,8 @@ export default function Profile() {
                       Log Out
                     </Button>
                   </div>
+            </div>
+                  
                 </>
         )
             }

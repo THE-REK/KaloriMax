@@ -6,14 +6,15 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,  
+  NavLink,
+  Badge,  
 } from "reactstrap";
 import { Link } from "react-router-dom"
 
 export default class Navi extends Component {
   render() {
     return (
-      <div>
+      <div style={{marginLeft:"250px"}}>
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">KALORİMAX</NavbarBrand>
           <NavbarToggler />
@@ -32,7 +33,7 @@ export default class Navi extends Component {
               </NavItem>
               
             </Nav>
-            <Link to="/profile">Profile</Link>
+            <Badge color="success"><Link to="/profile">Profile</Link>  </Badge>
             
           </Collapse>
         </Navbar>

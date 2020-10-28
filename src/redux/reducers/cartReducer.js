@@ -6,13 +6,13 @@ export default function cartReducer(state=initialState.cart,action){
 		case actionTypes.ADD_TO_CART:
 			var addedItem= state.find(c=>c.food.id===action.payload.food.id);
 			if (addedItem) {
-				state.map( cartItem => {
+				var newState= state.map( cartItem => {
 					if(cartItem.food.id===action.payload.food.id) {
 						return Object.assign({},addedItem,{quantity:addedItem.quantity+1})
 					}
 					return cartItem;
 				})
-				return [...state, ];
+				return newState;
 			} else {
 				return [...state, { ...action.payload }]
 			}
