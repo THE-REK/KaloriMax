@@ -71,9 +71,11 @@ class Water extends Component {
             <Card>
               <CardBody>
                 <CardHeader><h3>Günlük {Math.round(this.props.waters.water * 4)} bardak Su İçmelisin</h3></CardHeader>
-               {this.glassFonk()}
-               <br/><i>Not: Bardakların hacmine göre değişkenlik gösterebilir.</i>
+              <div>{this.glassFonk()}</div> <br/>
+               
+               
               </CardBody>
+              <CardBody><div ><i>Not: Bardakların hacmine göre değişkenlik gösterebilir.</i></div></CardBody>
             </Card>
           </Col>
         </Row>
