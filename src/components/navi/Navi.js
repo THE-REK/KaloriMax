@@ -32,7 +32,6 @@ export default class Navi extends Component {
               <NavItem>
                 <NavLink href="/water/">Günlük Su İhtiyacı</NavLink>
               </NavItem>
-              
             </Nav>
             <DropdownToggle ><NavLink color="black" href="/profile">Profile</NavLink>  </DropdownToggle>
             
