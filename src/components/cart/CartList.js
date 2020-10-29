@@ -3,10 +3,14 @@ import {connect} from "react-redux"
 import {  Badge, Button, Card, CardBody, Col, Table, Row, CardHeader } from 'reactstrap';
 import { bindActionCreators } from 'redux';
 import *as cartActions from "../../redux/actions/cartActions"
+import *as profileActions from "../../redux/actions/profileActions"
 
 
 
 class CartList extends Component {
+    addToProfile = (food) => {
+        this.props.actions.addToProfile({ quantity: 1, food });
+      };
     render() {
         return (
             <Card style={{border:"2px solid"}}>
@@ -33,6 +37,8 @@ class CartList extends Component {
           <td>{cartItem.food.foodName}</td>
           <td>{cartItem.quantity}</td>
           <td>{cartItem.food.calories}</td>
+          <Button color="success" onClick={()=>this.addToProfile(cartItem.food)}>Gönder</Button>
+         
           
         </tr>
         
@@ -40,7 +46,7 @@ class CartList extends Component {
           
           
         
-        
+          
       </tbody>
       
     </Table>
@@ -52,6 +58,7 @@ class CartList extends Component {
             )
              }  
                 </h3> 
+                
           </div>
           ):(<div>
               <Row>
@@ -78,7 +85,9 @@ class CartList extends Component {
 function mapDispatchToProps(dispatch){
     return{
         actions:{
-            removeFromCart: bindActionCreators(cartActions.removeFromCart, dispatch)
+            removeFromCart: bindActionCreators(cartActions.removeFromCart, dispatch),
+            addToProfile: bindActionCreators(profileActions.addToProfile, dispatch)
+
         }
     }
 }
@@ -87,7 +96,8 @@ function mapStateToProps(state){
     return {
         foods:state.changeFoodReducer,
         cart: state.cartReducer,
-        forms: state.calorieReducer
+        forms: state.calorieReducer,
+        profile: state.profileReducer
     }
 }
 

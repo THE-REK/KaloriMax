@@ -9,6 +9,7 @@ import Login from "../../pages/auth/Login"
 import PrivateRoute from "../../pages/auth/PrivateRoute"
 import ForgotPassword from "../../pages/auth/ForgotPassword"
 import UpdateProfile from "../../pages/auth/UpdateProfile"
+import Water from "../water/Water"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <AuthProvider>
             <Switch>
               <Route exact path="/" component={Dashboard} />
+              <Route exact path="/water" component={Water} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
