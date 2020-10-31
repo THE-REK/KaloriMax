@@ -5,6 +5,8 @@ THE-REK-foods-JSON-data brunch'ındaki db.json dosyasını bilgisayarımızda kl
 Visual Studio Code terminelinde db.json'ın klasörüne cd kodu ile gidiyoruz. Sonra "npx json-server --watch db.json" komutunu yazıp enter'a basıyoruz. Localhost:3000de olması için React projesini başlatmadan önce db.json'ın yayına sokulması gerekiyor.
 Pull ettiğimiz kodların klasörünü bulup visual studio code'dun terminalinde npm start diyerek başlatıyoruz.
 
+![](KaloriMax.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:
