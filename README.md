@@ -1,8 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Nasıl Çalıştırılacağına Dair Türkçe Açıklama
-THE-REK-foods-JSON-data brunch'ındaki db.json dosyasını bilgisayarımızda klasör oluşturup içine atıyoruz.
-Visual Studio Code terminelinde db.json'ın klasörüne cd kodu ile gidiyoruz. Sonra "npx json-server --watch db.json" komutunu yazıp enter'a basıyoruz. Localhost:3000de olması için React projesini başlatmadan önce db.json'ın yayına sokulması gerekiyor.
+THE-REK-foods-JSON-data brunch'ındaki db.json dosyasını bilgisayarımızda klasör oluşturup içine atıyoruz.<br/>
+Visual Studio Code terminalinde db.json'ın klasörüne cd kodu ile gidiyoruz. Sonra "npx json-server --watch db.json" komutunu yazıp enter'a basıyoruz.<br/>
+Localhost:3000de olması için React projesini başlatmadan önce db.json'ın yayına sokulması gerekiyor.<br/>
 Pull ettiğimiz kodların klasörünü bulup visual studio code'dun terminalinde npm start diyerek başlatıyoruz.
 
 ![](KaloriMax.gif)
@@ -11,10 +12,16 @@ Pull ettiğimiz kodların klasörünü bulup visual studio code'dun terminalinde
 
 In the project directory, you can run:
 
+### `npx json-server --watch db.json`
+
+Download this db.json file in the THE-REK-JSON-data brunch.
+Runs the data in the development mode<br/>
+Open [http://localhost:3000/foods](http://localhost:3000/foods) to view it in the browser.
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
