@@ -22,7 +22,7 @@ export default class Navi extends Component {
           <Collapse navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/foods/">Yemek Kalori Listesi</NavLink>
+                <NavLink href="/foods/">Foods Calorie List</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/THE-REK/KaloriMax">
@@ -30,10 +30,11 @@ export default class Navi extends Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/water/">Günlük Su İhtiyacı</NavLink>
+                <NavLink href="/water/">Daily Water Needs</NavLink>
               </NavItem>
+              <DropdownToggle style={{marginLeft:"495px"}} > <NavItem><NavLink  href="/profile">Profile</NavLink></NavItem>   </DropdownToggle>
             </Nav>
-            <DropdownToggle ><NavLink color="black" href="/profile">Profile</NavLink>  </DropdownToggle>
+            
             
           </Collapse>
         </Navbar>

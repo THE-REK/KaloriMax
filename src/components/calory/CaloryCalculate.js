@@ -31,31 +31,31 @@ class CaloryCalculate extends Component {
                 overflowY: 'auto'
               }}>
                 <Card>
-                    <CardHeader><h3>Kalori Hesaplama</h3></CardHeader>
+                    <CardHeader><h3>Calorie Calculator</h3></CardHeader>
                     <CardBody>
                     <Form onSubmit={(event)=>this.props.actions.handleSubmit(event)}>
                     <FormGroup>
-                        <Label for="boy">Boyunuz</Label>
-                    <Input type="number" name="boy" id="boy" placeholder="Boyunuzu cm Cinsinden Girin" onChange={(event)=>this.props.actions.handleChange(event)}
+                        <Label for="boy">Height</Label>
+                    <Input type="number" name="boy" id="boy" placeholder="Enter Height (cm)" onChange={(event)=>this.props.actions.handleChange(event)}
                     ></Input>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="yas">Yaşınız</Label>
-                    <Input type="number" name="yas" id="yas" placeholder="Yaşınızı Girin" onChange={(event)=>this.props.actions.handleChange(event)}></Input>
+                        <Label for="yas">Age</Label>
+                    <Input type="number" name="yas" id="yas" placeholder="Enter Age" onChange={(event)=>this.props.actions.handleChange(event)}></Input>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="kilo">Kilonuz</Label>
-                    <Input type="number" name="kilo" id="kilo" placeholder="Kilonuzu Girin" onChange={(event)=>this.props.actions.handleChange(event)}></Input>
+                        <Label for="kilo">Weight</Label>
+                    <Input type="number" name="kilo" id="kilo" placeholder="Enter Weight (kg)" onChange={(event)=>this.props.actions.handleChange(event)}></Input>
                     </FormGroup>
                     <FormGroup>
-                        <Label for="gender">Cinsiyet</Label>
+                        <Label for="gender">Gender</Label>
                     <Input type="select" name="gender" id="gender" onChange={(event)=>this.props.actions.handleChange(event)} >
-                        <option>Erkek</option>
-                        <option>Kadın</option>
+                        <option>Male</option>
+                        <option>Female</option>
                     </Input>
-                    <Input type="submit" onSubmit={(event)=>this.props.actions.handleSubmit(event)} value="Hesapla"></Input>
+                    <Input type="submit" onSubmit={(event)=>this.props.actions.handleSubmit(event)} value="Calculate"></Input>
                     </FormGroup>
-                  <h5><Badge>Günlük Kalori İhtiyacı:{this.props.forms.gkm}</Badge>  </h5>
+                  <h5><Badge>Daily Caloric Needs:{this.props.forms.gkm}</Badge>  </h5>
                 </Form>
                 
                 

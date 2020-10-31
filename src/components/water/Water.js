@@ -13,12 +13,13 @@ import {
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as calorieActions from "../../redux/actions/calorieActions";
+import Navi from "../navi/Navi";
 
 class Water extends Component {
   glassFonk = () => {
     var glass = [];
     var bor = Math.ceil(this.props.waters.water * 4);
-    for (var i = 0; i < bor; i++) {
+    for (var i = 0; i < bor-1; i++) {
       glass.push(<div style={{float:"left", marginLeft:"20px"}}>
         <h1>
           <i className="fad fa-glass"></i>
@@ -32,24 +33,31 @@ class Water extends Component {
 
   render() {
     return (
-      <div>
-        <Row>
+      <div >
+        <div >
+          <Row>
+           <Navi/> 
+          </Row>
+          
+        </div>
+        
+        <Row style={{marginTop:"50px"}}>
           <Col xs="4">
             <Card style={{ border: "2px solid" }}>
               <CardHeader>
-                <h3>Günlük Su İhtiyacı Hesaplama</h3>
+                <h3>Daily Water Needs Calculater</h3>
               </CardHeader>
               <CardBody>
                 <Form
                   onSubmit={(event) => this.props.actions.handleSubmit(event)}
                 >
                   <FormGroup>
-                    <Label for="kilo">Kilonuz</Label>
+                    <Label for="kilo">Weight</Label>
                     <Input
                       type="number"
                       name="kilo"
                       id="kilo"
-                      placeholder="Kilonuzu Girin"
+                      placeholder="Enter Weight"
                       onChange={(event) =>
                         this.props.actions.handleChange(event)
                       }
@@ -59,10 +67,10 @@ class Water extends Component {
                       onSubmit={(event) =>
                         this.props.actions.handleSubmit(event)
                       }
-                      value="Hesapla"
+                      value="Calculate"
                     ></Input>
                   </FormGroup>
-                  <h5>Günde {Math.ceil(this.props.waters.water)}Lt Su Tüketmelisin </h5>
+                  <h5>Drinking {Math.ceil(this.props.waters.water)}Lt of Water Per Day </h5>
                 </Form>
               </CardBody>
             </Card>
@@ -70,12 +78,12 @@ class Water extends Component {
           <Col xs="8">
             <Card>
               <CardBody>
-                <CardHeader><h3>Günlük {Math.round(this.props.waters.water * 4)} bardak Su İçmelisin</h3></CardHeader>
+                <CardHeader><h3>Drinking {Math.round(this.props.waters.water * 4)} Glasses of Water Per Day</h3></CardHeader>
               <div>{this.glassFonk()}</div> <br/>
                
                
               </CardBody>
-              <CardBody><div ><i>Not: Bardakların hacmine göre değişkenlik gösterebilir.</i></div></CardBody>
+              <CardBody><div ><i>Note: It may vary depending on the volume of the glasses.</i></div></CardBody>
             </Card>
           </Col>
         </Row>

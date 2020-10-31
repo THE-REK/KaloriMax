@@ -25,7 +25,7 @@ class FoodsList extends Component {
       <div>
         <Card style={{ border: "2px solid" }}>
           <CardHeader>
-            <h3>Yemek Listesi</h3>
+            <h3>Food List</h3>
           </CardHeader>
           <CardBody>
             <div
@@ -43,9 +43,9 @@ class FoodsList extends Component {
                 <thead>
                   <tr>
                     <th>#</th>
-                    <th>Menü</th>
-                    <th>Yemek</th>
-                    <th>Kalori</th>
+                    <th>Menu</th>
+                    <th>Kind</th>
+                    <th>Calorie</th>
                   </tr>
                 </thead>
                 <tbody>

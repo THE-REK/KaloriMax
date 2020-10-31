@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import Navi from '../../components/navi/Navi'
-import { CardHeader, Row } from 'reactstrap'
+import { CardColumns, CardHeader, Row } from 'reactstrap'
 import { Card, Button, Alert } from "react-bootstrap"
 import { useAuth } from "../../contexts/AuthContexts"
 import { Link, useHistory } from "react-router-dom"
@@ -32,8 +32,11 @@ export default function Profile() {
                 <CardHeader><h2 className="text-center mb-4">Profile</h2>  </CardHeader>
                     <Card.Body>
                       {error && <Alert variant="danger">{error}</Alert>}
+                      <CardColumns><strong>Email:</strong>
+                       {currentUser && currentUser.email}</CardColumns>
+                      <strong>Weight:</strong>80
+                      <CardColumns><strong>Age:</strong>25</CardColumns>
                       
-                      <strong>Email:</strong> {currentUser && currentUser.email}
                       <Link to="/update-profile" className="btn btn-primary w-100 mt-3">
                         Update Profile
                       </Link>
