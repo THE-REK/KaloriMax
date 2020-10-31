@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fantastic calorie calculate app with daily water needs, foods calorie list and add to daily eats cart. Built with react,react-redux, redux, redux thunk, firebase, redux-saga, bootstrap.
 
 
 ![](KaloriMax.gif)
