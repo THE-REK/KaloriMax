@@ -1,4 +1,7 @@
-A fantastic calorie calculate app with daily water needs, foods calorie list and add to daily eats cart. Built with react,react-redux, redux, redux thunk, firebase, redux-saga, bootstrap.
+A fantastic calorie calculate app with daily water needs, foods calorie list and add to daily eats cart. Built with react,react-redux, redux, redux thunk, firebase, redux-saga, bootstrap.<br/>
+
+##Main Branch is dev
+
 
 
 ![](KaloriMax.gif)
